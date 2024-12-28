@@ -1,0 +1,116 @@
+.fourth-section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.fourth-section__inner{
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fourth-section__headline{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.fourth-section__text{
+    line-height: 2;
+    min-width: 500px;
+    width: 40%;
+    color: gray;
+    text-align: center;
+    margin-bottom: 90px;
+}
+.fourth-section__container{
+    width: 90%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 35px;
+    grid-auto-flow: column;
+
+}
+.fourth-section__container div{
+    border-radius: 10px;
+}
+.fourth-section__block1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.fourth-section__container div{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fourth-section__block1{
+    background-image: url("../images/section-4/1.webp");
+}
+.fourth-section__block2{
+    background-image: url("../images/section-4/2.webp");
+}
+.fourth-section__block3{
+    background-image: url("../images/section-4/3.webp");
+}
+.fourth-section__block4{
+    background-image: url("../images/section-4/4.webp");
+}
+.fourth-section__block5{
+    background-image: url("../images/section-4/5.webp");
+}
+@media (max-width: 1349px) {
+    .fourth-section__container{
+        width: 100%;
+    }
+}
+@media (max-width: 1206px){
+    .fourth-section__container{
+        width: 80%;
+        height: calc(100vh/2*3.5);
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .fourth-section__block1{
+        grid-column: 1/span 2;
+    }
+}
+@media (max-width: 985px) {
+    .fourth-section__container{
+      width: 100%;
+    }
+
+}
+@media (max-width: 795px) {
+    .fourth-section__container{
+        width: 80%;
+        height: calc(100vh/2*5.5);
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0;
+    }
+    .fourth-section__container div{
+        grid-column: 1/span !important;
+    }
+    .fourth-section__text{
+        min-width: 400px;
+    }
+
+}
+@media (max-width: 600px) {
+    .fourth-section__text{
+        min-width: 300px;
+    }
+}
+@media (max-width: 470px) {
+    .fourth-section__inner{
+        width: 100%;
+    }
+    .fourth-section__container{
+        width: 93.5%;
+    }
+
+}

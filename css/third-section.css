@@ -1,0 +1,64 @@
+.third-section, .fifth-section{
+    width: 100%;
+    margin-top: 200px;
+    height: 100vh;
+    background-color: rgb(31, 31, 31);
+    margin-bottom: 200px;
+    display: flex;
+
+}
+.third-section__img, .third-section__content{
+    width: 50%;
+    height: 100%;
+}
+.third-section__img{
+    background-image: url("../images/about.png.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.third-section__content{
+    padding-left: 100px;
+    padding-top: clamp(20px, 10vw, 180px);
+}
+.third-section__about-us{
+    color: white;
+    margin-bottom: 20px;
+}
+.third-section__title{
+    color: white;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+.third-section__description{
+    color: darkgrey;
+    font-size: 1rem;
+    width: 85%;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+.third-section__content span, .fifth-section__content span{
+    color: darkgrey;
+    display: block;
+    font-size: 1.2rem;
+    width: 75%;
+}
+.third-section__content button{
+    margin-bottom: 100px;
+}
+@media (max-width: 1130px) {
+    .third-section__description{
+        width: 90%;
+    }
+    .third-section__content, .fifth-section__content{
+        padding-left: 50px;
+    }
+}
+@media (max-width: 990px) {
+    .third-section__img{
+        display: none;
+    }
+
+    .third-section__content, .fifth-section__content{
+        width: 100%;
+    }
+}

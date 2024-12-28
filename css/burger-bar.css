@@ -1,0 +1,66 @@
+:root {
+    --logo-color: #00cec9;
+    --bg-color: #fbfbfb;
+    --text-color: white;
+}
+
+
+*::selection {
+    color: #fbfbfb;
+    background: var(--logo-color);
+}
+
+.menu__mobile_button {
+    position: relative;
+    height: 26px;
+    margin-top: clamp(5px, 0.65vw, 2000px);
+    width: 40px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.menu__mobile_button span,
+.menu__mobile_button::before,
+.menu__mobile_button::after {
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 6px;
+    opacity: 1;
+}
+
+.menu__mobile_button span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu__mobile_button::before {
+    content: "";
+    top: 0;
+    transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu__mobile_button::after {
+    content: "";
+    top: calc(100% - 6px);
+    transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu__mobile_button.active span {
+    opacity: 0;
+}
+
+.menu__mobile_button.active::before,
+.menu__mobile_button.active::after {
+    top: 40%;
+}
+
+.menu__mobile_button.active::before {
+    transform: rotate(45deg);
+}
+
+.menu__mobile_button.active::after {
+    transform: rotate(-45deg);
+}

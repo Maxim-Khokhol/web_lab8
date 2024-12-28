@@ -1,0 +1,97 @@
+.sixth-section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.sixth-section__inner{
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sixth-section__headline{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.sixth-section__text{
+    line-height: 2;
+    min-width: 500px;
+    width: 40%;
+    color: gray;
+    text-align: center;
+    margin-bottom: 90px;
+}
+.sixth-section__workers{
+    width: 100%;
+    height: 65%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 500px;
+    grid-gap: 20px;
+}
+.workers__worker-card{
+    height: 100%;
+    text-align: center;
+}
+.workers__image{
+    width: 100%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 10px;
+
+}
+.workers__image-worker-1{
+ background-image: url("../images/workers/1.webp");
+}
+.workers__image-worker-2{
+    background-image: url("../images/workers/2.webp");
+}
+.workers__image-worker-3{
+    background-image: url("../images/workers/3.webp");
+}
+.workers__image-worker-4{
+    background-image: url("../images/workers/4.webp");
+}
+.workers__worker-card p{
+    transform: translateY(-50%);
+    color: rgb(112, 112, 112);
+}
+
+@media (max-width: 1000px) {
+    .sixth-section__workers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 600px 600px;
+        height: 100%;
+    }
+}
+
+@media (max-width: 795px) {
+    .sixth-section__text{
+        min-width: 400px;
+    }
+
+}
+@media (max-width: 600px) {
+    .sixth-section__text{
+        min-width: 300px;
+    }
+}
+@media (max-width: 700px) {
+    .sixth-section__inner{
+        width: 100%;
+    }
+    .sixth-section__workers{
+        display: grid;
+        grid-template-columns: 300px;
+        justify-content: center;
+        grid-template-rows: repeat(4, 500px);
+        height: 100%;
+    }
+
+}
